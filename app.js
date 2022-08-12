@@ -23,3 +23,4 @@ import 'dotenv/config'
 let servidorComfama = new Servidor();
 servidorComfama.encenderServidor();
 
+//console.log(process.env.PORT) // remove this after you've confirmed it working
