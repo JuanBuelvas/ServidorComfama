@@ -2,6 +2,8 @@
 import express from 'express'
 //Instanciar Routers
 import {routers} from '../routers/routers.js'
+//Instanciar metodo conectar
+import {conectar} from '../database/conexion.js'
 
 export class Servidor{
 
@@ -23,5 +25,9 @@ export class Servidor{
         this.app.listen(process.env.PORT, function(){
             console.log("Corriendo servidor por el puerto " + process.env.PORT)
         })
+    }
+
+    conectarBD(){
+        conectar();
     }
 }

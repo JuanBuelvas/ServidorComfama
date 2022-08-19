@@ -62,10 +62,16 @@ export class HabitacionController{
 
     //Editar Habitacion
     editarHabitacion(request, response){
+
+        let id = request.params.id;
+
+        let datos = request.body;
+
+
         try{
             response.status(200).json({
-                mensaje:"Exito en la consulta " + id,
-                datos:["Habi1","200USD","Tv por cable"]
+                mensaje:"Exito editando la habitacion " + id,
+                datos:datos
             })
         }catch(error){ //Fallo Resolviendo la Peticion
             response(404).json({
